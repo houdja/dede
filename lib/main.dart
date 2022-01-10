@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 void main() {
   return runApp(
@@ -37,7 +38,7 @@ class DicePage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: FlatButton(
                 onPressed: () {
-                  print('domething');
+                  print(Random().nextInt(7));
                 },
                 child: Image.asset(
                   'images/dice$leftDiceNumber.png',
