@@ -24,8 +24,8 @@ class DicePage extends StatefulWidget {
 class _DicePage extends State<DicePage> {
   int leftDiceNumber = 1;
   int rightDiceNumber = 2;
-  var randNum = (int max) {
-    return Random().nextInt(max) + 1;
+  var randNum = () {
+    return Random().nextInt(6) + 1;
   };
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,7 @@ class _DicePage extends State<DicePage> {
                 onPressed: () {
                   setState(
                     () {
-                      leftDiceNumber = randNum(6);
+                      leftDiceNumber = randNum();
                     },
                   );
                 },
@@ -58,7 +58,7 @@ class _DicePage extends State<DicePage> {
                 onPressed: () {
                   setState(
                     () {
-                      rightDiceNumber = randNum(6);
+                      rightDiceNumber = randNum();
                     },
                   );
                 },
