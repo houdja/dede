@@ -16,7 +16,12 @@ void main() {
   );
 }
 
-class DicePage extends StatelessWidget {
+class DicePage extends StatefulWidget {
+  @override
+  _DicePage createState() => _DicePage();
+}
+
+class _DicePage extends State<DicePage> {
   int leftDiceNumber = 1;
   @override
   Widget build(BuildContext context) {
@@ -38,7 +43,9 @@ class DicePage extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: FlatButton(
                 onPressed: () {
-                  print(Random().nextInt(7));
+                  setState(() {
+                    leftDiceNumber = Random().nextInt(6) + 1;
+                  });
                 },
                 child: Image.asset(
                   'images/dice$leftDiceNumber.png',
