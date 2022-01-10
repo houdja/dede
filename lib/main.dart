@@ -25,7 +25,7 @@ class DicePage extends StatelessWidget {
           Expanded(
             flex: 1,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Image.asset(
                 'images/dice$leftDiceNumber.png',
               ),
@@ -35,8 +35,13 @@ class DicePage extends StatelessWidget {
             flex: 1,
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
-              child: Image.asset(
-                'images/dice$leftDiceNumber.png',
+              child: FlatButton(
+                onPressed: () {
+                  print('domething');
+                },
+                child: Image.asset(
+                  'images/dice$leftDiceNumber.png',
+                ),
               ),
             ),
           ),
